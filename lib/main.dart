@@ -6,7 +6,7 @@ import 'firebase_options.dart';
 import './screens/login_screen.dart';  // ログイン画面
 import './screens/signup_screen.dart'; // サインアップ画面
 import './screens/home_screen.dart';   // ホーム画面
-import './providers/auth_provider.dart'; // auth_provider をインポート
+import './providers/auth_provider.dart';
 import './providers/team_provider.dart';
 
 void main() async {
@@ -20,7 +20,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider( // 複数のProviderを管理
+    return MultiProvider( 
       providers: [
         ChangeNotifierProvider(create: (context) => AuthProvider()),
         ChangeNotifierProvider(create: (context) => TeamProvider()),

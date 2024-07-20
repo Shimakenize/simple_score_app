@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                   authProvider.login(
                     _emailController.text,
                     _passwordController.text,
-                    context, // BuildContext を渡す
+                    context, 
                   );
                 },
                 child: Text('ログイン'),
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 10),
               TextButton(
                 onPressed: () {
-                  authProvider.guestLogin(); // ゲストログイン処理
+                  authProvider.guestLogin(); // context を渡さない
                   Navigator.of(context).pushNamed('/home');
                 },
                 child: Text('ゲストで使用'),
